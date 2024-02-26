@@ -22,7 +22,9 @@ public class CircularListIterator<T> implements Iterator<T> {
 
     @Override
     public T next() {
-        if (hasNext()) {
+        if (this.list.isEmpty()) {
+            throw new NoSuchElementException();
+        } else {
             if (forward) {  
                 T nextValue = this.list.get(this.nextPosition);
                 this.nextPosition = (this.nextPosition + 1) % this.list.size();
@@ -33,8 +35,6 @@ public class CircularListIterator<T> implements Iterator<T> {
                     this.nextPosition - 1;
                 return this.list.get(this.nextPosition);
             }
-        } else {
-            throw new NoSuchElementException();
         }
     }
     

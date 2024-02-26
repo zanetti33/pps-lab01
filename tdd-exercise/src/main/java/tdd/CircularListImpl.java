@@ -1,27 +1,17 @@
 package tdd;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
-public class CircularListImpl implements CircularList {
+import common.ListWrapper;
 
-    private List<Integer> list = new ArrayList<Integer>();
+public class CircularListImpl extends ListWrapper<Integer> implements CircularList {
+
     private int nextPosition;
 
     @Override
     public void add(int element) {
-        this.list.add(element);
-    }
-
-    @Override
-    public int size() {
-        return this.list.size();
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return this.list.isEmpty();
+        super.add(element);
     }
 
     @Override

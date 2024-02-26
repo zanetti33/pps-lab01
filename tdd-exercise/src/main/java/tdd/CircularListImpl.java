@@ -34,8 +34,9 @@ public class CircularListImpl implements CircularList {
 
     @Override
     public Optional<Integer> previous() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'previous'");
+        this.position = this.position == 0 ? this.list.size() - 1 : this.position - 1;
+        int nextValue = this.list.get(this.position);
+        return Optional.of(nextValue);
     }
 
     @Override

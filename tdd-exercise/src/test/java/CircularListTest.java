@@ -27,6 +27,7 @@ public class CircularListTest {
 
     @Test
     public void creatingCircularList() {
+        @SuppressWarnings("unused")
         CircularList circularList = new CircularListImpl();
     }
 
@@ -48,11 +49,26 @@ public class CircularListTest {
         assertEquals(1, this.circularList.next().get());
     }
 
-    @Test void nextGivesTheFirstElementAfterTheLast() {
+    @Test 
+    public void nextGivesTheFirstElementAfterTheLast() {
         this.circularList.next();
         this.circularList.next();
         this.circularList.next();
         assertEquals(1, this.circularList.next().get());
     }
     
+    @Test
+    public void previousGivesThePreviousElement() {
+        this.circularList.next();
+        assertEquals(1, this.circularList.previous().get());
+    }
+
+    @Test 
+    public void previousGivesTheLastElementInitially() {
+        assertEquals(3, this.circularList.previous().get());
+    }
+    
+    @Test
+    
+
 }

@@ -7,6 +7,7 @@ import java.util.Optional;
 public class CircularListImpl implements CircularList {
 
     private final List<Integer> list = new ArrayList<Integer>();
+    private int position;
 
     @Override
     public void add(int element) {
@@ -26,8 +27,7 @@ public class CircularListImpl implements CircularList {
 
     @Override
     public Optional<Integer> next() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'next'");
+        return Optional.of(this.list.get(this.position));
     }
 
     @Override

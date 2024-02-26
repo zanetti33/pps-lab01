@@ -1,4 +1,4 @@
-package myPackage;
+package tdd.withIteretors;
 
 import java.util.Iterator;
 

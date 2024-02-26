@@ -9,6 +9,9 @@ import java.util.NoSuchElementException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import tdd.withIteretors.CircularList;
+import tdd.withIteretors.CircularListImpl;
+
 /**
  * The test suite for testing the CircularList implementation
  */

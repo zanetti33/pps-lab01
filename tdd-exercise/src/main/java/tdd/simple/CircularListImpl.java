@@ -1,13 +1,11 @@
-package tdd;
+package tdd.simple;
 
 import java.util.ArrayList;
 import java.util.Optional;
 
-import common.ListWrapper;
+import tdd.common.ListWrapper;
 
-public class CircularListImpl extends ListWrapper<Integer> implements CircularList {
-
-    private int nextPosition;
+public class CircularListImpl extends ListWrapper<Integer> implements tdd.simple.CircularList {
 
     @Override
     public void add(int element) {

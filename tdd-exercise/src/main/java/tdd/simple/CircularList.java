@@ -1,4 +1,4 @@
-package tdd;
+package tdd.simple;
 
 import java.util.Optional;
 

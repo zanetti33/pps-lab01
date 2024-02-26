@@ -39,7 +39,9 @@ public class CircularListImpl implements CircularList {
         if (this.list.isEmpty()) {
             return Optional.empty();
         }
-        this.nextPosition = this.nextPosition == 0 ? this.list.size() - 1 : this.nextPosition - 1;
+        this.nextPosition = this.nextPosition == 0 ? 
+            this.list.size() - 1 : 
+            this.nextPosition - 1;
         int nextValue = this.list.get(this.nextPosition);
         return Optional.of(nextValue);
     }

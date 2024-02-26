@@ -7,11 +7,15 @@ import org.junit.jupiter.api.Test;
  */
 public class CircularListTest {
 
-    //TODO: test implementation
+    @Test
+    public void creatingCircularList() {
+        CircularList circularList = new CircularListImpl();
+    }
 
-    @Disabled
-    @Test public void testTodo(){
-        Assertions.fail();
+    @Test
+    public void checkingCirularListIsInitiallyEmpty() {
+        CircularList circularList = new CircularList();
+        assertTrue(circularList.isEmpty()); 
     }
 
 }

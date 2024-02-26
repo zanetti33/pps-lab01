@@ -2,6 +2,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.Optional;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
@@ -79,4 +81,9 @@ public class CircularListTest {
         assertTrue(this.circularList.isEmpty());
     }
 
+    @Test
+    public void gettingAnElementFromAnEmptyCircularListGivesAnEmptyOptional() {
+        CircularList circularList = new CircularListImpl();
+        assertTrue(circularList.next().isEmpty());
+    }
 }

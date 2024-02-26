@@ -48,5 +48,11 @@ public class CircularListTest {
         assertEquals(1, this.circularList.next().get());
     }
 
+    @Test void nextGivesTheFirstElementAfterTheLast() {
+        this.circularList.next();
+        this.circularList.next();
+        this.circularList.next();
+        assertEquals(1, this.circularList.next().get());
+    }
     
 }

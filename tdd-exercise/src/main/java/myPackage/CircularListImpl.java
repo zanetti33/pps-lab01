@@ -15,14 +15,40 @@ public class CircularListImpl extends ListWrapper<Integer> implements CircularLi
 
     @Override
     public Iterator<Integer> forwardIterator() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'forwardIterator'");
+        return new Iterator<Integer>() {
+
+            @Override
+            public boolean hasNext() {
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'hasNext'");
+            }
+
+            @Override
+            public Integer next() {
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'next'");
+            }
+            
+        };
     }
 
     @Override
     public Iterator<Integer> backwardIterator() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'backwardIterator'");
+        return new Iterator<Integer>() {
+
+            @Override
+            public boolean hasNext() {
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'hasNext'");
+            }
+
+            @Override
+            public Integer next() {
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'next'");
+            }
+            
+        };
     }
     
 }

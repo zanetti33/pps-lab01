@@ -3,6 +3,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.Iterator;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -28,16 +30,10 @@ public class CircularListTest {
     }
 
     @Test
-    public void cirularListIsInitiallyEmpty() {
-        CircularList circularList = new CircularListImpl();
-        assertTrue(circularList.isEmpty()); 
-    }
-
-    @Test
-    public void elementsCanBeAdded() {
-        CircularList circularList = new CircularListImpl();
-        circularList.add(0);
-        assertFalse(circularList.isEmpty()); 
+    public void forwardIteratorGivesElementsInOrder() {
+        Iterator<Integer> iterator = this.circularList.forwardIterator();
+        iterator.next();
+        assertEquals(2, iterator.next());
     }
     
 }

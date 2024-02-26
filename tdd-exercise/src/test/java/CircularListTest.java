@@ -69,6 +69,14 @@ public class CircularListTest {
     }
     
     @Test
+    public void sizeGivesTheCorrectValue() {
+        assertEquals(3, this.circularList.size());
+    }
     
+    @Test
+    public void resetEmptiesTheList() {
+        this.circularList.reset();
+        assertTrue(this.circularList.isEmpty());
+    }
 
 }

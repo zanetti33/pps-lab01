@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public class CircularListImpl implements CircularList {
 
-    private final List<Integer> list = new ArrayList<Integer>();
+    private List<Integer> list = new ArrayList<Integer>();
     private int position;
 
     @Override
@@ -16,8 +16,7 @@ public class CircularListImpl implements CircularList {
 
     @Override
     public int size() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'size'");
+        return this.list.size();
     }
 
     @Override
@@ -41,8 +40,8 @@ public class CircularListImpl implements CircularList {
 
     @Override
     public void reset() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'reset'");
+        this.list = new ArrayList<>();
+        this.position = 0;
     }
 
 }

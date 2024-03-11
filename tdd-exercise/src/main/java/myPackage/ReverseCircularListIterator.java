@@ -4,12 +4,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public class CircularListIterator<T> implements Iterator<T> {
+public class ReverseCircularListIterator<T> implements Iterator<T> {
 
     private final List<T> list;
     private int nextPosition;
 
-    public CircularListIterator(List<T> list) {
+    public ReverseCircularListIterator(List<T> list) {
         this.list = list;
     }
 
@@ -23,9 +23,10 @@ public class CircularListIterator<T> implements Iterator<T> {
         if (this.list.isEmpty()) {
             throw new NoSuchElementException();
         }
-        T nextValue = this.list.get(this.nextPosition);
-        this.nextPosition = (this.nextPosition + 1) % this.list.size();
-        return nextValue;
+        this.nextPosition = this.nextPosition == 0 ? 
+            this.list.size() - 1 : 
+            this.nextPosition - 1;
+        return this.list.get(this.nextPosition);
     }
     
     

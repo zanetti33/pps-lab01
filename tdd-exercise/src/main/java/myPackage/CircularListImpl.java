@@ -12,12 +12,12 @@ public class CircularListImpl extends ListWrapper<Integer> implements CircularLi
 
     @Override
     public Iterator<Integer> forwardIterator() {
-        return new CircularListIterator<Integer>(this.list, true);
+        return new CircularListIterator<Integer>(this.list);
     }
 
     @Override
     public Iterator<Integer> backwardIterator() {
-        return new CircularListIterator<Integer>(this.list, false);
+        return new ReverseCircularListIterator<Integer>(this.list);
     }
     
 }

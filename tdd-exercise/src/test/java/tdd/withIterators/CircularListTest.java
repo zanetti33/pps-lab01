@@ -1,4 +1,4 @@
-package myPackage;
+package tdd.withIterators;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -9,12 +9,21 @@ import java.util.NoSuchElementException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import tdd.common.GrowableList;
+import tdd.common.GrowableListTest;
+
 /**
- * The test suite for testing the CircularList implementation
+ * The test suite for testing the tdd.withIterators.CircularList implementation
  */
-public class CircularListTest {
+public class CircularListTest extends GrowableListTest {
 
     private CircularList circularList;
+
+    // this method (thanks to GrowableListTest abstract class) tests
+    // some common methods such as empty(), size() and add(element)
+    protected GrowableList<Integer> newGrowableList() {
+        return new CircularListImpl();
+    }
 
     @BeforeEach
     public void initializeCircularListWithElements() {
@@ -24,12 +33,6 @@ public class CircularListTest {
         this.circularList.add(3);
         this.circularList.add(4);
         this.circularList.add(5);
-    }
-
-    @Test
-    public void creatingCircularList() {
-        @SuppressWarnings("unused")
-        CircularList circularList = new CircularListImpl();
     }
 
     @Test

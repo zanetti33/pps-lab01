@@ -1,6 +1,8 @@
-package myPackage;
+package tdd.withIterators;
 
 import java.util.Iterator;
+
+import tdd.common.GrowableList;
 
 /**
  * Represents a list of integers, with access to two iterator.
@@ -10,25 +12,7 @@ import java.util.Iterator;
  * the fourth returns 1, and so on. 
  * Call to next() of the second iterator goes in the other way.
  */
-public interface CircularList {
-
-    /**
-     * Adds an element to the list, namely, after the last inserted one.
-     * @param element the element to be added to the list
-     */
-    void add(final int element);
-
-    /**
-     * Provides the current size of the list
-     * @return the size of the list
-     */
-    int size();
-
-    /**
-     * Checks if the list is empty
-     * @return true if the list is empty, false otherwise
-     */
-    boolean isEmpty();
+public interface CircularList extends GrowableList<Integer> {
 
     /**
      * Provides an iterator of the list that goes forward and circulates around

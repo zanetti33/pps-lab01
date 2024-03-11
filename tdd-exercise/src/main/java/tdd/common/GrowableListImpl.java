@@ -1,9 +1,9 @@
-package common;
+package tdd.common;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListWrapper<T> {
+public class GrowableListImpl<T> implements GrowableList<T> {
 
     protected List<T> list = new ArrayList<>();
 

@@ -1,10 +1,10 @@
-package myPackage;
+package tdd.withIteretors;
 
 import java.util.Iterator;
 
-import common.ListWrapper;
+import tdd.common.ListWrapper;
 
-public class CircularListImpl extends ListWrapper<Integer> implements CircularList {
+public class CircularListImpl extends ListWrapper<Integer> implements ListWrapper {
     @Override
     public void add(int element) {
         super.add(element);

@@ -1,4 +1,4 @@
-package myPackage;
+package tdd.withIteretors;
 
 import java.util.Iterator;
 import java.util.List;
@@ -27,6 +27,18 @@ public class CircularListIterator<T> implements Iterator<T> {
         this.nextPosition = (this.nextPosition + 1) % this.list.size();
         return nextValue;
     }
-    
+
+    protected T nextValue()  {
+        T nextValue = this.list.get(this.nextPosition);
+        this.nextPosition = (this.nextPosition + 1) % this.list.size();
+        return nextValue;
+    }
+
+    protected T previousValue()  {
+        this.nextPosition = this.nextPosition == 0 ? 
+            this.list.size() - 1 :
+            this.nextPosition - 1;
+        return this.list.get(this.nextPosition);
+    }
     
 }
